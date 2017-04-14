@@ -15,7 +15,7 @@ getAccounts().then(function(results){
   for (var i =0; i<ids_array.length;i++) {
     promises.push(subscribeAccountToPlan(ids_array[i])); // push the Promises to our array
   }
-  return Q.all(promises).then(function());
+  return Q.all(promises);
 }).then(function(arr){
   console.log("AAA",arr)
   console.log("DONE :)")
